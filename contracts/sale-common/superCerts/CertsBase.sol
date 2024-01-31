@@ -15,7 +15,7 @@ contract CertsBase is Accessable, ReentrancyGuard {
     using Logics for *;
 
     CertsTypes.Store private _dataStore;
-    IManager internal _manager;
+    IManager internal immutable _manager;
 
     modifier notLive() {
         _require(!isLive(), "Already live");

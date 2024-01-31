@@ -6,7 +6,7 @@ import "../interfaces/IManager.sol";
 
 abstract contract Factory {
     
-    IManager internal _manager;
+    IManager internal immutable _manager;
     uint internal _autoIndex;
 
     constructor(IManager manager) {

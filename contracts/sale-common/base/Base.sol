@@ -23,7 +23,7 @@ abstract contract Base is Insurable, PauseReturnable, SuperCertsClaimable, Multi
         Failed
     }
 
-    IManager internal _manager;
+    IManager internal immutable _manager;
     uint internal _state; // Bitmask of bool //
 
     modifier onlyManager() {

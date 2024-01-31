@@ -64,7 +64,7 @@ contract SalesV5 is Fillability, Base {
     Claims private _claims;
     Tally private _tally;
 
-    address private _officialSigner;
+    address private immutable _officialSigner;
 
     event Buy(address indexed user, uint cost);
     event Refund(address indexed user, uint amount);
